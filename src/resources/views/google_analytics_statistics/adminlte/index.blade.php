@@ -1,1 +1,1 @@
-@include('google_analytics_statistics-adminlte-boxes::monthly')
+@include('google-analytics-statistics-adminlte-boxes::monthly')
