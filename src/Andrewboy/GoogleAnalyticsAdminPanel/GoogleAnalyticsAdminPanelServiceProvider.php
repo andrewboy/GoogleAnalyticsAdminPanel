@@ -40,6 +40,10 @@ class GoogleAnalyticsAdminPanelServiceProvider extends ServiceProvider
             $resourcesDir .'/views/google_analytics_statistics/',
             'google-analytics-statistics'
         );
+        $this->loadViewsFrom(
+            $resourcesDir .'/views/google_analytics_statistics/boxes',
+            'google-analytics-statistics-boxes'
+        );
         $this->publishes([
             $resourcesDir .'/views/google_analytics_statistics/' => base_path('resources/views/vendor/google-analytics-statistics')
         ]);
