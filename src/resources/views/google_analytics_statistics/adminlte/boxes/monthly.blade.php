@@ -1,4 +1,4 @@
-@extends('statisticspanel-adminlte-boxes::monthly')
+@extends('laravel-statistics-panel-adminlte-boxes::monthly')
 
 @section('content')
 

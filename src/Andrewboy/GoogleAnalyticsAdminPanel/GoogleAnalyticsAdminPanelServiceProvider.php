@@ -2,6 +2,10 @@
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class GoogleAnalyticsAdminPanelServiceProvider
+ * @package Andrewboy\GoogleAnalyticsAdminPanel
+ */
 class GoogleAnalyticsAdminPanelServiceProvider extends ServiceProvider
 {
     /**
@@ -10,6 +14,7 @@ class GoogleAnalyticsAdminPanelServiceProvider extends ServiceProvider
      * @var bool
      */
     protected $defer = false;
+
 
     /**
      * Register the service provider.
@@ -31,27 +36,23 @@ class GoogleAnalyticsAdminPanelServiceProvider extends ServiceProvider
         return [];
     }
 
+
+    /**
+     * Set service provider
+     * @return void
+     */
     public function boot()
     {
-        $resourcesDir =  __DIR__ . '/../../resources';
+        $resourcesDir = __DIR__ .'/../../resources';
 
-        #VIEW
+        // VIEW
         $this->loadViewsFrom(
-            $resourcesDir .'/views/google_analytics_statistics/adminlte',
+            $resourcesDir.'/views/google_analytics_statistics/adminlte',
             'google-analytics-statistics-adminlte'
         );
         $this->loadViewsFrom(
-            $resourcesDir .'/views/google_analytics_statistics/adminlte/boxes',
+            $resourcesDir.'/views/google_analytics_statistics/adminlte/boxes',
             'google-analytics-statistics-adminlte-boxes'
-        );
-
-        $this->loadViewsFrom(
-            $resourcesDir .'/views/statistics_panel/adminlte/boxes',
-            'statisticspanel-adminlte-boxes'
-        );
-        $this->loadViewsFrom(
-            $resourcesDir .'/views/statistics_panel/adminlte/boxes/headers',
-            'statisticspanel-adminlte-box-headers'
         );
 
         $this->publishes([
@@ -60,7 +61,7 @@ class GoogleAnalyticsAdminPanelServiceProvider extends ServiceProvider
 
         #TRANSLATIONS
         $this->loadTranslationsFrom(
-            $resourcesDir .'/lang/',
+            $resourcesDir.'/lang/',
             'google-analytics-statistics'
         );
         $this->publishes(
