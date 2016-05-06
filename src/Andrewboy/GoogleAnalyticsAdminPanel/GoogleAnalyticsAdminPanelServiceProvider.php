@@ -37,13 +37,23 @@ class GoogleAnalyticsAdminPanelServiceProvider extends ServiceProvider
 
         #VIEW
         $this->loadViewsFrom(
-            $resourcesDir .'/views/google_analytics_statistics/',
-            'google-analytics-statistics'
+            $resourcesDir .'/views/google_analytics_statistics/adminlte',
+            'google-analytics-statistics-adminlte'
         );
         $this->loadViewsFrom(
-            $resourcesDir .'/views/google_analytics_statistics/boxes',
-            'google-analytics-statistics-boxes'
+            $resourcesDir .'/views/google_analytics_statistics/adminlte/boxes',
+            'google-analytics-statistics-adminlte-boxes'
         );
+
+        $this->loadViewsFrom(
+            $resourcesDir .'/views/statistics_panel/adminlte/boxes',
+            'statisticspanel-adminlte-boxes'
+        );
+        $this->loadViewsFrom(
+            $resourcesDir .'/views/statistics_panel/adminlte/boxes/headers',
+            'statisticspanel-adminlte-box-headers'
+        );
+
         $this->publishes([
             $resourcesDir .'/views/google_analytics_statistics/' => base_path('resources/views/vendor/google-analytics-statistics')
         ]);
