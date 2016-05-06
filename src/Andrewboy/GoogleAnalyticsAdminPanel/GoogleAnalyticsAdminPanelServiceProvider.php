@@ -33,7 +33,7 @@ class GoogleAnalyticsAdminPanelServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $resourcesDir =  __DIR__ . '/../../../resources';
+        $resourcesDir =  __DIR__ . '/../../resources';
 
         #VIEW
         $this->loadViewsFrom(
