@@ -13,10 +13,18 @@
     "illuminate/support": ">5.0",
     "andrewboy/laravel-statistics-panel": "dev-master"
   },
+  "require-dev": {
+    "laravel/laravel": "5.1.*",
+    "phpunit/phpunit": "4.*",
+    "fabpot/php-cs-fixer": "^1.10"
+  },
   "autoload": {
     "psr-0": {
       "Andrewboy\\GoogleAnalyticsAdminPanel": "src/"
     }
+  },
+  "config": {
+    "bin-dir": "bin/"
   },
   "minimum-stability": "dev"
 }
