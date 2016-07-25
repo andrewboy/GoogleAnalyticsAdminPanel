@@ -1,5 +1,5 @@
 {
-  "name": "andrewboy/google-analytics-statistics",
+  "name": "andrewboy/laravel-ga-statistics-panel",
   "description": "Laravel package for google analytics panel.",
   "keywords": ["laravel", "google", "analytics", "panel"],
   "authors": [
