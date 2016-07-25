@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
  * Class GoogleAnalyticsAdminPanelServiceProvider
  * @package Andrewboy\GoogleAnalyticsAdminPanel
  */
-class GoogleAnalyticsAdminPanelServiceProvider extends ServiceProvider
+class LaravelGaStatisticsPanelServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -47,33 +47,33 @@ class GoogleAnalyticsAdminPanelServiceProvider extends ServiceProvider
 
         // VIEW
         $this->loadViewsFrom(
-            $resourcesDir.'/views/google_analytics_statistics/adminlte',
-            'google-analytics-statistics-adminlte'
+            $resourcesDir.'/views/laravel_ga_statistics_panel/adminlte',
+            'laravel-ga-statistics-panel-adminlte'
         );
         $this->loadViewsFrom(
-            $resourcesDir.'/views/google_analytics_statistics/adminlte/boxes',
-            'google-analytics-statistics-adminlte-boxes'
+            $resourcesDir.'/views/laravel_ga_statistics_panel/adminlte/boxes',
+            'laravel-ga-statistics-panel-adminlte-boxes'
         );
 
         $this->publishes([
-            $resourcesDir .'/views/google_analytics_statistics/' => base_path('resources/views/vendor/google-analytics-statistics')
+            $resourcesDir .'/views/laravel_ga_statistics_panel/' => base_path('resources/views/vendor/laravel-ga-statistics-panel')
         ]);
 
         #TRANSLATIONS
         $this->loadTranslationsFrom(
             $resourcesDir.'/lang/',
-            'google-analytics-statistics'
+            'laravel-ga-statistics-panel'
         );
         $this->publishes(
             [
-                $resourcesDir .'/lang/' => base_path('resources/lang/vendor/google-analytics-statistics'),
+                $resourcesDir .'/lang/' => base_path('resources/lang/vendor/laravel-ga-statistics-panel'),
             ]
         );
 
         #ASSETS
         $this->publishes(
             [
-                $resourcesDir .'/assets/' => public_path('vendor/google-analytics-statistics'),
+                $resourcesDir .'/assets/' => public_path('vendor/laravel-ga-statistics-panel'),
             ],
             'public'
         );
