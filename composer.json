@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Andrewboy\\GoogleAnalyticsAdminPanel": "src/"
+      "Andrewboy\\LaravelGaStatisticsPanel": "src/"
     }
   },
   "config": {
